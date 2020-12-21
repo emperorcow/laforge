@@ -1,13 +1,7 @@
-import { Component, NgModule, OnInit } from '@angular/core';
-import { Environment } from 'src/app/models/environment.model';
-
-// import { Step } from '../.../../../models/plan.model';
-import { PlanService } from '../../plan.service';
-import { chike } from '../../../data/sample-config';
-
-// interface EnvConfig {
-//   text : string
-// }
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { Environment, resolveStatuses } from 'src/app/models/environment.model';
+import { ApiService } from 'src/app/services/api/api.service';
+import { SubheaderService } from '../../_metronic/partials/layout/subheader/_services/subheader.service';
 
 @Component({
   selector: 'app-plan',
@@ -15,7 +9,30 @@ import { chike } from '../../../data/sample-config';
   styleUrls: ['./plan.component.scss']
 })
 export class PlanComponent implements OnInit {
-  environment: Environment = chike;
-  constructor() {}
-  ngOnInit(): void {}
+  // corpNetwork: ProvisionedNetwork = corp_network_provisioned;
+  environment: Environment = null;
+  loaded = false;
+  displayedColumns: string[] = ['TeamCount', 'AdminCIDRs', 'ExposedVDIPorts', 'maintainer'];
+  selectionMode = false;
+
+  constructor(private api: ApiService, private cdRef: ChangeDetectorRef, private subheader: SubheaderService) {
+    this.subheader.setTitle('Plan');
+    this.subheader.setDescription('Plan your currently running environment');
+  }
+
+  ngOnInit(): void {
+    this.api.getEnvironment('a3f73ee0-da71-4aa6-9280-18ad1a1a8d16').subscribe((result) => {
+      this.environment = resolveStatuses(result.data.environment) as Environment;
+      this.loaded = true;
+      this.cdRef.detectChanges();
+    });
+  }
+
+  rebuildEnv(): void {
+    console.log('rebuilding env...');
+  }
+
+  toggleSelectionMode(): void {
+    this.selectionMode = !this.selectionMode;
+  }
 }
