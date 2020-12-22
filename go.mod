@@ -62,8 +62,8 @@ require (
 	github.com/masterzen/winrm v0.0.0-20200615185753-c42b5136ff88
 	github.com/mattn/go-sqlite3 v1.14.5
 	github.com/mattn/go-zglob v0.0.3
-	github.com/mitchellh/mapstructure v1.4.0 // indirect
 	github.com/mholt/archiver v3.1.1+incompatible
+	github.com/mitchellh/mapstructure v1.4.0 // indirect
 	github.com/nsf/termbox-go v0.0.0-20200418040025-38ba6e5628f1 // indirect
 	github.com/nwaples/rardecode v1.1.0 // indirect
 	github.com/olekukonko/tablewriter v0.0.4
@@ -80,20 +80,10 @@ require (
 	github.com/urfave/cli v1.22.4
 	github.com/valyala/fasttemplate v1.2.1 // indirect
 	github.com/vektah/gqlparser/v2 v2.1.0
-	github.com/xlab/treeprint v1.0.0
-	github.com/zclconf/go-cty v1.5.1 // indirect
-	golang.org/x/crypto v0.0.0-20201208171446-5f87f3452ae9
-	golang.org/x/net v0.0.0-20200904194848-62affa334b73
-	golang.org/x/sys v0.0.0-20201207223542-d4d67f95c62d // indirect
-	golang.org/x/text v0.3.3 // indirect
-	google.golang.org/protobuf v1.25.0 // indirect
-	gopkg.in/AlecAivazis/survey.v1 v1.8.8
-	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
-	gopkg.in/yaml.v2 v2.4.0 // indirect
 	github.com/xi2/xz v0.0.0-20171230120015-48954b6210f8 // indirect
 	github.com/xlab/treeprint v1.0.0
 	github.com/zclconf/go-cty v1.5.1 // indirect
-	golang.org/x/crypto v0.0.0-20200820211705-5c72a883971a
+	golang.org/x/crypto v0.0.0-20201208171446-5f87f3452ae9
 	golang.org/x/net v0.0.0-20201209123823-ac852fbbde11
 	golang.org/x/sys v0.0.0-20201207223542-d4d67f95c62d // indirect
 	golang.org/x/text v0.3.4 // indirect
@@ -103,6 +93,7 @@ require (
 	google.golang.org/protobuf v1.25.0
 	gopkg.in/AlecAivazis/survey.v1 v1.8.8
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
+	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gorm.io/driver/sqlite v1.1.4
 	gorm.io/gorm v1.20.8
 )

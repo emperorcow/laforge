@@ -12,7 +12,7 @@ export class PlanComponent implements OnInit {
   // corpNetwork: ProvisionedNetwork = corp_network_provisioned;
   environment: Environment = null;
   loaded = false;
-  displayedColumns: string[] = ['TeamCount', 'AdminCIDRs', 'ExposedVDIPorts', 'maintainer'];
+  //displayedColumns: string[] = ['TeamCount', 'AdminCIDRs', 'ExposedVDIPorts', 'maintainer'];
   selectionMode = false;
 
   constructor(private api: ApiService, private cdRef: ChangeDetectorRef, private subheader: SubheaderService) {
